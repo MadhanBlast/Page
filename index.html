@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Success</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;  /* Set background to black */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        /* Wrapper for centering the content */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Styling for the message box */
+        .message-box {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: scaleUp 1s ease-in-out, pulsate 2s infinite;
+            max-width: 90%;
+            width: 300px;
+        }
+
+        /* Styling for the message text */
+        .message-box p {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        /* Animation for scaling the message box */
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Pulsating effect for the message box */
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        /* Media Query for mobile devices with width 395px and up */
+        @media screen and (max-width: 400px) {
+            .message-box {
+                padding: 30px 40px;
+                width: 80%;
+            }
+
+            .message-box p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="message-box">
+            <p>You have successfully verified, re-open the again</p>
+        </div>
+    </div>
+</body>
+</html>
