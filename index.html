@@ -1,102 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification Success</title>
-    <style>
-        /* Reset default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Succes</title>
+  <style>
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
 
-        /* Body styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000;  /* Set background to black */
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow: hidden; /* Prevent scrollbars */
-        }
+    /* Centered Box Styles */
+    .centered-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full viewport height */
+      text-align: center;
+      background: linear-gradient(45deg, #000000, #2980b9, #e74c3c, #f39c12); /* Black, blue, red, orange gradient */
+      background-size: 400% 400%; /* Larger gradient for animation */
+      animation: gradientAnimation 10s ease infinite; /* Animated gradient */
+      width: 100%; /* Full width of the container */
+      position: relative;
+    }
+    
+    .rectangle-textbox {
+  background-color: rgba(186, 172, 172, 0.6); /* Semi-transparent white background */
+  color: #ecf0f1; /* Light text color for readability */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for a raised effect */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 1;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Dark shadow for text */
+  
+  /* Reduced width */
+  width: 60%; /* Adjust width as per your preference */
+  max-width: 500px; /* Optionally set a maximum width */
+  margin: 0 auto; /* Center the text box */
+  
+  /* Adding the outline */
+  outline: 3px solid rgba(255, 255, 255, 0.6); /* Light-colored outline */
+  outline-offset: 5px; /* Space between outline and text */
+}
 
-        /* Wrapper for centering the content */
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
 
-        /* Styling for the message box */
-        .message-box {
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-            padding: 40px 60px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            animation: scaleUp 1s ease-in-out, pulsate 2s infinite;
-            max-width: 90%;
-            width: 300px;
-        }
+    /* Keyframes to animate the background gradient */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-        /* Styling for the message text */
-        .message-box p {
-            font-size: 1.2rem;
-            color: #333;
-            font-weight: bold;
-            line-height: 1.5;
-        }
-
-        /* Animation for scaling the message box */
-        @keyframes scaleUp {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* Pulsating effect for the message box */
-        @keyframes pulsate {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            }
-        }
-
-        /* Media Query for mobile devices with width 395px and up */
-        @media screen and (max-width: 400px) {
-            .message-box {
-                padding: 30px 40px;
-                width: 80%;
-            }
-
-            .message-box p {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    /* Mobile-specific adjustments */
+    @media (max-width: 800px) {
+      .centered-box {
+        background-position: center; /* Ensure the background is always centered */
+        background-size: 300% 300%; /* Adjust gradient size for smaller screens */
+      }
+    
+      .rectangle-textbox {
+        font-size: 1.1rem; /* Smaller font size for mobile */
+        padding: 15px 30px; /* Adjust padding for smaller screens */
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .centered-box {
+        background-size: 250% 100%; /* Adjust for very small screens */
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="message-box">
-            <p>You have successfully verified, re-open the again</p>
-        </div>
+  <div class="centered-box">
+    <div class="rectangle-textbox">
+      You have successfully verified, re-open the app again
     </div>
+  </div>
 </body>
 </html>
