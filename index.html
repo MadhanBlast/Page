@@ -3,69 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verification Success</title>
+  <title>Verification</title>
   <style>
-    /* General Styles */
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    /* Centered Box with Gradient Background */
-    .centered-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(45deg, #000000, #2980b9, #e74c3c, #f39c12);
-      background-size: 400% 400%;
-      animation: gradientAnimation 10s ease infinite;
-      text-align: center;
-    }
-
-    /* Rectangle Text Box */
-    .rectangle-textbox {
-      background-color: rgba(186, 172, 172, 0.6);
-      color: #ecf0f1;
-      font-size: 1.5rem;
-      font-weight: bold;
-      padding: 20px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-      outline: 3px solid rgba(255, 255, 255, 0.6);
-      outline-offset: 5px;
-      width: 60%;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    /* Verification Container */
-    .verificationContainer {
+    .verificationContainer-7 {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
 
-    .verificationBox {
+    .verificationBox-7 {
       background-color: #1c1c1c;
       padding: 20px 30px;
       border-radius: 10px;
-      width: 90%;
+      text-align: center;
+      width: 80%;
       max-width: 400px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .logo h2 {
+    .logo-7 h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 2rem;
       font-variant: small-caps;
@@ -73,41 +34,36 @@
       margin-bottom: 5px;
     }
 
-    .logo p {
+    .logo-7 p {
       font-size: 13px;
       margin-bottom: 20px;
     }
 
-    .enter {
-      font-size: 22px;
-      color: #000;
-      background-color: #ffeb3b;
-      display: inline-block;
-      padding: 10px 30px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 20px 0;
-      transition: background-color 0.3s, transform 0.2s;
+    .yellow-text p {
+      color: #ffeb3b;
+      margin-bottom: 15px;
     }
 
-    .enter:hover {
-      background-color: #fbc02d;
-      transform: scale(1.05);
-    }
-
-    .description {
+    .description-7 {
       font-size: 12px;
       margin: 10px 0;
       color: #aaa;
     }
 
-    .error {
+    .description-6 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0;
+      color: yellow;
+    }
+
+    .error-7 {
       color: red;
       font-size: 14px;
       margin: 10px 0;
     }
 
-    .verifyButton {
+    .verifyButton-7 {
       background-color: white;
       color: #000;
       font-size: 15px;
@@ -119,62 +75,42 @@
       transition: background-color 0.3s;
     }
 
-    .verifyButton:hover {
-      background-color: #e0e0e0;
-    }
-
-    .verifyButton:disabled {
+    .verifyButton-7:disabled {
       background-color: #555;
       cursor: not-allowed;
     }
 
-    .footer {
+    .footer-7 {
       margin-top: 20px;
       color: #888;
       font-size: 12px;
     }
-
-    /* Keyframes for Gradient Animation */
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 800px) {
-      .rectangle-textbox {
-        font-size: 1.1rem;
-        padding: 15px 30px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .centered-box {
-        background-size: 250% 100%;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Main Centered Box -->
-  <div class="centered-box">
-    <div class="rectangle-textbox">
-      You have successfully verified, re-open the app again
+  <div class="verificationContainer-7">
+    <div class="verificationBox-7">
+      <div class="logo-7">
+        <h2>Verification Success</h2>
+     
+      </div>
+    
+   
+      <div class="description-6">
+        <p>Token Timeout: 1 week</p>
+      </div>
+      <p class="description-7">
+        Watch & download Telugu movies and Animes in excellent quality. Exclusively
+        designed for smartphones.
+      </p>
     </div>
   </div>
 
-  <!-- Verification Section -->
-  <div class="verificationContainer">
-    <div class="verificationBox">
-      <div class="logo">
-        <h2>Verification Success</h2>
-        <p>Please continue to access the app.</p>
-      </div>
-      <button class="verifyButton">Go to Home</button>
-      <p class="description">If you face any issues, please contact support.</p>
-    </div>
-    <p class="footer">© 2024 Your Company. All rights reserved.</p>
-  </div>
+  <script>
+    function handleVerification() {
+      console.log("Verification triggered");
+      // Add verification logic here
+    }
+  </script>
 </body>
 </html>
